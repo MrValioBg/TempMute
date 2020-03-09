@@ -1,0 +1,10 @@
+main: me.mrvaliobg.tempmute.TempMute
+version: 1.0.0
+name: TempMute
+commands:
+  tempmute:
+    usage: /tempmute <player> <time> <time-format>
+    description: Temp mute someone.
+  unmute:
+    usage: /unmumte <player>
+    description: Unmute someone who is muted.
