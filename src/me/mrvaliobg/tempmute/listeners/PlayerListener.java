@@ -13,7 +13,7 @@ import java.text.ParseException;
 public class PlayerListener implements Listener {
 
 
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onSpeak(AsyncPlayerChatEvent e) throws ParseException {
         if(!DataConfiguration.INSTANCE.getData().contains("Data." + e.getPlayer().getUniqueId())) return;
        e.setCancelled(MuteUtils.muteCheck(e.getPlayer()));
