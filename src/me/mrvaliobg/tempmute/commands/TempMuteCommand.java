@@ -12,20 +12,10 @@ import org.bukkit.entity.Player;
 
 public class TempMuteCommand implements CommandExecutor {
 
-    //Checks if it is int
-    private boolean isInt(String s) {
-        try {
-            Float.parseFloat(s);
-        } catch (Exception ex) {
-            return true;
-        }
-        return false;
-    }
-
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if ((sender instanceof ConsoleCommandSender) || !sender.isOp()) return true;
-        if (args.length != 3 || isInt(args[1])) {
+        if (args.length != 3 || GeneralUtils.isInt(args[1])) {
             MessageUtils.sendHelpMessage(sender);
             return true;
         }
