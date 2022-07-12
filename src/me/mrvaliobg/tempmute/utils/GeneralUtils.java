@@ -4,7 +4,7 @@ public final class GeneralUtils {
 
     private GeneralUtils() {}
   
-    private boolean isInt(String s) {
+    public static boolean isInt(String s) {
         try {
             Float.parseFloat(s);
         } catch (Exception ex) {
